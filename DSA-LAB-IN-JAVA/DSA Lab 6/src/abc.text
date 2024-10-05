@@ -1,0 +1,117 @@
+public void selection(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {  // Loop over each element
+        int minIndex = i;  // Assume the current element is the smallest
+
+        for (int j = i + 1; j < arr.length; j++) {  // Find the smallest element in the remaining unsorted array
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;  // Update minIndex if a smaller element is found
+            }
+        }
+
+        // Swap the found smallest element with the current element
+        if (minIndex != i) {
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+}
+public void insertionSort(int[] arr) {
+    // Loop over each element starting from the second element
+    for (int i = 1; i < arr.length; i++) {
+        int key = arr[i];  // Element to be inserted into the sorted portion
+        int j = i - 1;
+
+        // Shift elements of the sorted portion to the right
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];  // Move elements one position to the right
+            j = j - 1;
+        }
+
+        // Insert the key into its correct position
+        arr[j + 1] = key;
+    }
+}
+
+
+public class IterativeMergeSort {
+    public void mergeSort(int[] arr) {
+        int n = arr.length;
+        int[] temp = new int[n]; // Auxiliary array for merging
+
+        // Start with subarrays of size 1, then 2, 4, 8, ...
+        for (int currentSize = 1; currentSize < n; currentSize *= 2) {
+
+            // Pick starting point of different subarrays of currentSize
+            for (int leftStart = 0; leftStart < n - 1; leftStart += 2 * currentSize) {
+                // Find mid point and end point of subarrays to be merged
+                int mid = Math.min(leftStart + currentSize - 1, n - 1);
+                int rightEnd = Math.min(leftStart + 2 * currentSize - 1, n - 1);
+
+                // Merge the subarrays
+                merge(arr, temp, leftStart, mid, rightEnd);
+            }
+        }
+    }
+
+    // Function to merge two sorted subarrays arr[l...m] and arr[m+1...r]
+    private void merge(int[] arr, int[] temp, int left, int mid, int right) {
+        int i = left;  // Initial index of first subarray
+        int j = mid + 1;  // Initial index of second subarray
+        int k = left;  // Initial index of merged subarray
+
+        // Merge the two subarrays into temp[]
+        while (i <= mid && j <= right) {
+            if (arr[i] <= arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+            }
+        }
+
+        // Copy the remaining elements of left subarray, if any
+        while (i <= mid) {
+            temp[k++] = arr[i++];
+        }
+
+        // Copy the remaining elements of right subarray, if any
+        while (j <= right) {
+            temp[k++] = arr[j++];
+        }
+
+        // Copy the merged subarray back to the original array
+        for (i = left; i <= right; i++) {
+            arr[i] = temp[i];
+        }
+    }
+}
+
+import java.util.Arrays;
+
+public class TwoSumSolver {
+    public boolean TwoSum(int[] arr, int K) {
+        // Step 1: Sort the array
+        Arrays.sort(arr);
+
+        // Step 2: Initialize two pointers
+        int left = 0;
+        int right = arr.length - 1;
+
+        // Step 3: Use two-pointer technique to find the sum
+        while (left <= right) {
+            int sum = arr[left] + arr[right];
+
+            if (sum == K) {
+                return true; // Found a pair whose sum equals K
+            } else if (sum < K) {
+                left++; // Move left pointer to the right (increase sum)
+            } else {
+                right--; // Move right pointer to the left (decrease sum)
+            }
+        }
+
+        // Step 4: If no pair is found, return false
+        return false;
+    }
+}
+
