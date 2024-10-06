@@ -17,6 +17,7 @@
 		<em>Built with the tools and technologies:</em>
 </p>
 <p align="center">
+	<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=flat&logo=GitHub-Actions&logoColor=white" alt="GitHub%20Actions">
 	<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white" alt="java">
 </p>
 
@@ -56,19 +57,95 @@
 
 ```sh
 └── DSA-LAB-IN-JAVA.git/
+    ├── .github
+    │   └── workflows
+    │       └── maven-publish.yml
+    ├── Assignements
     ├── DSA-LAB-IN-JAVA
     │   ├── DSA Lab 6
+    │   │   ├── DSA Lab 6.iml
+    │   │   ├── GFG.java
+    │   │   ├── README.md
+    │   │   ├── Sorting.java
+    │   │   ├── SortingFour.class
+    │   │   ├── SortingFour.java
+    │   │   ├── Sum.class
+    │   │   ├── Sum.java
+    │   │   ├── bin
+    │   │   │   └── abc.text
+    │   │   ├── out
+    │   │   │   └── production
+    │   │   │       └── DSA Lab 6
+    │   │   └── src
+    │   │       ├── App.java
+    │   │       ├── TaskI.java
+    │   │       └── abc.text
     │   ├── LAB5
+    │   │   ├── LAB5.iml
+    │   │   ├── out
+    │   │   │   └── production
+    │   │   │       └── LAB5
+    │   │   └── src
+    │   │       ├── BalancedBrackets.java
+    │   │       ├── FirstLetter.java
+    │   │       ├── InfixToPostfix.java
+    │   │       ├── Main.java
+    │   │       └── ReverseOder.java
     │   ├── Lab 1
+    │   │   ├── Lab 1.iml
+    │   │   ├── out
+    │   │   │   └── production
+    │   │   │       └── Lab 1
+    │   │   └── src
+    │   │       ├── Main.java
+    │   │       └── Tasks.java
     │   ├── Lab 2
+    │   │   ├── Lab 2.iml
+    │   │   ├── out
+    │   │   │   └── production
+    │   │   │       └── Lab 2
+    │   │   └── src
+    │   │       ├── LinkedList.java
+    │   │       ├── List.java
+    │   │       ├── Main.java
+    │   │       ├── Node.java
+    │   │       └── TaskIII.java
     │   ├── Lab 3
+    │   │   ├── Lab 3.iml
+    │   │   ├── out
+    │   │   │   └── production
+    │   │   │       └── Lab 3
+    │   │   └── src
+    │   │       ├── DoubleLinkedList.java
+    │   │       ├── DoubleLinkedListUSinTail.java
+    │   │       ├── DoublyLinkedListCycleDetector.java
+    │   │       └── Main.java
     │   └── Lab4
+    │       ├── Lab4.iml
+    │       ├── out
+    │       │   └── production
+    │       │       └── Lab4
+    │       └── src
+    │           ├── Main.java
+    │           ├── Node.java
+    │           ├── QueueUsingStack.java
+    │           ├── StackUsingArray.java
+    │           ├── StackUsingLinkedList.java
+    │           └── StackUsingQueues.java
     └── README.md
 ```
 
 ---
 
 ## 🧩 Modules
+
+<details closed><summary>.</summary>
+
+| File | Summary |
+| --- | --- |
+| [Assignements](https://github.com/amarjaleelbanbhan/DSA-LAB-IN-JAVA.git/blob/main/Assignements) | <code>❯ REPLACE-ME</code> |
+
+</details>
 
 <details closed><summary>DSA-LAB-IN-JAVA.Lab 3.src</summary>
 
@@ -169,6 +246,14 @@
 | [StackUsingArray.java](https://github.com/amarjaleelbanbhan/DSA-LAB-IN-JAVA.git/blob/main/DSA-LAB-IN-JAVA/Lab4/src/StackUsingArray.java) | <code>❯ REPLACE-ME</code> |
 | [QueueUsingStack.java](https://github.com/amarjaleelbanbhan/DSA-LAB-IN-JAVA.git/blob/main/DSA-LAB-IN-JAVA/Lab4/src/QueueUsingStack.java) | <code>❯ REPLACE-ME</code> |
 | [StackUsingLinkedList.java](https://github.com/amarjaleelbanbhan/DSA-LAB-IN-JAVA.git/blob/main/DSA-LAB-IN-JAVA/Lab4/src/StackUsingLinkedList.java) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>.github.workflows</summary>
+
+| File | Summary |
+| --- | --- |
+| [maven-publish.yml](https://github.com/amarjaleelbanbhan/DSA-LAB-IN-JAVA.git/blob/main/.github/workflows/maven-publish.yml) | <code>❯ REPLACE-ME</code> |
 
 </details>
 
